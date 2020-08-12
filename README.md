@@ -31,7 +31,7 @@ Update guide - see: [https://update.angular.io](https://update.angular.io)
 $ git clone https://github.com/EfrainGaray/Amazon-retail.git
 
 # go into app's directory
-$ cd my-project
+$ cd Amazon-retail
 
 # install app's dependencies
 $ npm install
