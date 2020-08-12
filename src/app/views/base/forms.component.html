@@ -1,0 +1,261 @@
+<div class="animated fadeIn">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-edit"></i>Datos del Documento
+        </div>
+        <div class="card-body">
+          <div style="float:right;" class="col-xs-12 col-lg-3 col-md-4 col-centered">
+            <div style="border:1px solid red;padding:10px;text-align:center;">
+              <span class="h4" id="texto_rut">RUT 1.111.111-4</span><br>
+              <span id="texto_tipodocumento" class="h4"> {{docType}}  </span><br>
+              <span id="texto_numdocumento" class="h4">N° {{folio}}</span><br>
+              <span id="texto_infodocumento" class="h5" style="color:red;">(DOC NO CREADO - FOLIO ESTIMADO) </span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="tipoDoc">Tipo de Documento</label>
+              <div class="col-md-9">
+                <select class="form-control" id="tipoDoc" name="tipoDoc" [(ngModel)]="docType">
+                  <option value="FACTURA ELECTRÓNICA" selected>Factura Electronica</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="date-input">Fecha de Emisión</label>
+              <div class="col-md-9">
+                <input class="form-control" id="date-input" name="date-input" value="12-08-2020" placeholder="date"
+                       type="date">
+                <span class="help-block">Selecione la fecha de emisión</span>
+              </div>
+
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label">Folio</label>
+              <div class="col-md-3 col-form-label">
+                <div class="form-check">
+                  <input class="form-check-input" id="checkbox1" type="checkbox" value="option1" checked/>
+                  <label class="form-check-label" for="checkbox1"> Automatico </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div> <!--/.col-->
+  </div><!--/.row-->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-edit"></i>Datos del Cliente
+        </div>
+        <div class="card-body ">
+
+          <div class="form-group row">
+            <div class="col-5">
+              <input class="form-control" id="rut-search" placeholder="Buscar por Rut" type="text">
+              <label class="form-check-label" for="rut-search"> Ingrese el rut del cliente </label>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-sm btn-success" type="submit"><i class="fa fa-dot-circle-o"></i> Buscar</button>
+            </div>
+            <div class="col-5">
+              <input class="form-control" id="razon" placeholder="Buscar por Razon Social" type="text">
+              <label class="form-check-label" for="razon">Ingrese  Razon Social</label>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-sm btn-success" type="submit"><i class="fa fa-dot-circle-o"></i> Buscar</button>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-3 col-md-4 col-sm-6">
+              <input class="form-control" placeholder="16519262-1" type="text" disabled>
+              <label class="form-check-label" for="razon">Rut</label>
+            </div>
+            <div class="col-3  col-md-4 col-sm-6">
+              <input class="form-control" placeholder="Calzado Spa." type="text" disabled>
+              <label class="form-check-label" for="razon">Razon social</label>
+            </div>
+            <div class="col-3  col-md-4 col-sm-6">
+              <input class="form-control" id="giro" placeholder="Venta de zapatos" type="text" disabled>
+              <label class="form-check-label" for="giro">Razon social</label>
+            </div>
+            <div class="col-3  col-md-4 col-sm-6">
+              <input class="form-control" placeholder="p sherman calle wallaby 42 sidney" type="text" disabled>
+              <label class="form-check-label" for="giro">Direccion</label>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="col-3  col-md-4 col-sm-6">
+              <input class="form-control" placeholder="932712166" type="text" disabled>
+              <label class="form-check-label" for="giro">Telefono</label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> <!--/.col-->
+  </div><!--/.row-->
+
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header"><i class="fa fa-align-justify"></i> Agregar Productos</div>
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="col-5">
+                  <input class="form-control" id="rut-search" placeholder="Buscar por Codigo" type="text">
+
+                </div>
+                <div class="col-1">
+                  <button class="btn btn-sm btn-success" type="submit"><i class="fa fa-dot-circle-o"></i> Buscar</button>
+                </div>
+                <div class="col-5">
+                  <input class="form-control" id="razon" placeholder="Buscar por Nombre" type="text">
+
+                </div>
+                <div class="col-1">
+                  <button class="btn btn-sm btn-success" type="submit"><i class="fa fa-dot-circle-o"></i> Buscar</button>
+                </div>
+              </div>
+              <table class="table table-bordered table-striped table-sm">
+                <thead>
+                <tr>
+                  <th>Codigo</th>
+                  <th>Nombre</th>
+                  <th>Cantidad</th>
+                  <th>Precio</th>
+                  <th>Stock</th>
+                  <th>Sub Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+                <tr>
+                  <td>000001</td>
+                  <td>Zapatilla a la moda</td>
+                  <td> <input class="form-control" placeholder="Ingrese la cantidad" [(ngModel)]="cat1" type="number" ></td>
+                  <td> 4000 </td>
+                  <td>$1.000</td>
+                  <td>{{cat1 * 1000}}</td>
+                </tr>
+
+
+                </tbody>
+              </table>
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+              </nav>
+              <button type="button" class="btn btn-success mr-1" data-toggle="modal" (click)="successModal.show()">
+                Crear Factura
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!--/.col-->
+  </div><!--/.row-->
+</div>
+<div bsModal #successModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-success" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Factura Emitida</h4>
+        <button type="button" class="close" (click)="successModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Factura {{folio}} fue creada con exito </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="successModal.hide()">Cerrar</button>
+        <button type="button" class="btn btn-success" (click)="successModal.hide()">Terminar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
